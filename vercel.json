@@ -13,8 +13,16 @@
       "destination": "/frontend/app.js"
     },
     {
+      "source": "/admin",
+      "destination": "/frontend/admin.html"
+    },
+    {
       "source": "/admin.html",
       "destination": "/frontend/admin.html"
+    },
+    {
+      "source": "/admin-portal",
+      "destination": "/frontend/admin-portal.html"
     },
     {
       "source": "/admin-portal.html",
