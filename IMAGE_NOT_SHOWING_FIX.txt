@@ -1,0 +1,93 @@
+🔧 Image Not Showing - Solution Guide
+=====================================
+
+✅ সমস্যা কি?
+-------------
+Google Drive এ upload করা images publicly accessible নয়।
+Google Drive folder এ "Anyone with the link can view" permission দিতে হবে।
+
+
+📋 Solution 1: Google Drive Folder Public করুন
+------------------------------------------------
+1. Google Drive এ যান: https://drive.google.com/drive/folders/13VB59I38SzW4ekhRN4zMsFU1fpkeBxOE
+
+2. Folder এ right-click করুন → Share
+
+3. "General access" section এ:
+   - "Restricted" থেকে change করে
+   - "Anyone with the link" select করুন
+   - Permission: "Viewer" রাখুন
+
+4. "Done" click করুন
+
+5. Website refresh করুন (Ctrl+Shift+R)
+   Images এখন show করবে!
+
+
+📋 Solution 2: ImgBB বা Imgur Use করুন (Recommended)
+-------------------------------------------------------
+Google Drive এর পরিবর্তে free image hosting use করুন:
+
+1. ImgBB: https://imgbb.com/
+   - Free account তৈরি করুন
+   - Image upload করুন
+   - Direct link পাবেন
+   - সেই link Sheet1 এ paste করুন
+
+2. Imgur: https://imgur.com/
+   - Upload করুন
+   - Right-click → "Copy image address"
+   - সেই link Sheet1 এ paste করুন
+
+
+📋 Solution 3: Backend Code Update
+------------------------------------
+backend/code.gs এ Google Drive file এর sharing settings automatically set করার code add করুন:
+
+function uploadGalleryImage(data) {
+  const blob = Utilities.newBlob(
+    Utilities.base64Decode(data.image.split(",")[1]),
+    "image/png",
+    data.title
+  );
+
+  const folder = DriveApp.getFolderById(IMAGE_FOLDER_ID);
+  const file = folder.createFile(blob);
+  
+  // ✅ Make file publicly accessible
+  file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+  
+  const url = file.getUrl();
+  const directUrl = `https://drive.google.com/uc?export=view&id=${file.getId()}`;
+
+  const sheet = SpreadsheetApp.getActive().getSheetByName(GALLERY_SHEET);
+  sheet.appendRow([data.title, data.desc, directUrl, data.category, new Date()]);
+
+  return ContentService.createTextOutput("OK");
+}
+
+
+🔍 Quick Test
+-------------
+Browser console (F12) এ check করুন:
+- ✅ "Loading gallery from:" দেখা যাচ্ছে কিনা
+- ✅ "Total rows found: 2" দেখা যাচ্ছে কিনা
+- ❌ Image load error আছে কিনা
+
+Console এ image URL hover করে click করুন।
+যদি Google login page আসে = Permission issue (Solution 1 follow করুন)
+
+
+✨ Best Practice
+----------------
+Production website এর জন্য:
+1. Cloudinary, ImgBB, বা Imgur use করুন (free & fast)
+2. অথবা নিজের server এ host করুন
+3. Google Drive slow হতে পারে large files এর জন্য
+
+
+📞 Need Help?
+-------------
+- Console screenshot পাঠান (F12)
+- Google Drive folder permission screenshot পাঠান
+- Sheet1 এর image URL column screenshot পাঠান

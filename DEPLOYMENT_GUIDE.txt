@@ -1,0 +1,103 @@
+🚀 Google Apps Script Setup & Deployment Guide
+===============================================
+
+✅ Step 1: Google Apps Script এ যান
+------------------------------------
+1. Browser এ যান: https://script.google.com
+2. "New Project" button click করুন
+3. Project name দিন: "Saint Martin Tour API"
+
+
+✅ Step 2: Code Copy করুন
+--------------------------
+1. workspace এর backend/code.gs file open করুন
+2. সব code copy করুন (Ctrl+A, then Ctrl+C)
+3. Google Apps Script editor এ paste করুন (Ctrl+V)
+4. Save করুন (Ctrl+S অথবা 💾 icon)
+
+
+✅ Step 3: Deploy করুন
+-----------------------
+1. উপরে "Deploy" button click করুন
+2. "New deployment" select করুন
+3. Settings:
+   - Type: Select "Web app"
+   - Description: "Tour Website API v1"
+   - Execute as: "Me (your-email@gmail.com)"
+   - Who has access: "Anyone"
+   
+4. "Deploy" button click করুন
+5. Authorization প্রয়োজন হবে:
+   - "Authorize access" click করুন
+   - Your Google account select করুন
+   - "Advanced" click করুন (যদি warning আসে)
+   - "Go to Saint Martin Tour API (unsafe)" click করুন
+   - "Allow" click করুন
+
+6. Web app URL copy করুন
+   উদাহরণ: https://script.google.com/macros/s/AKfycbxxx.../exec
+
+
+✅ Step 4: Web App URL Configure করুন
+---------------------------------------
+1. workspace এ admin-portal.html file open করুন
+2. Line 545 এ যান
+3. এই line টা খুঁজুন:
+   const API_URL = "PASTE_YOUR_GOOGLE_WEB_APP_URL_HERE";
+
+4. Replace করুন:
+   const API_URL = "https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec";
+   
+   (আপনার copy করা URL paste করুন)
+
+5. Save করুন (Ctrl+S)
+
+
+✅ Step 5: Test করুন
+--------------------
+1. Browser এ যান: http://localhost:8000/admin.html
+2. Login করুন:
+   - Email: Admin@gmail.com
+   - Password: Admin
+
+3. Admin Portal এ যান
+4. Gallery Management tab এ:
+   - একটা image upload করুন
+   - Title, Description, Category দিন
+   - "Upload to Gallery" click করুন
+
+5. Google Sheets check করুন:
+   - Sheet1 এ নতুন row যোগ হয়েছে কিনা দেখুন
+
+
+✅ Troubleshooting
+------------------
+যদি upload কাজ না করে:
+
+1. Browser console check করুন (F12 press করুন)
+2. Google Apps Script Execution log দেখুন:
+   - script.google.com এ যান
+   - Left sidebar এ "Executions" click করুন
+   - Error আছে কিনা দেখুন
+
+3. Sheet permissions check করুন:
+   - Sheet1, Sheet2, Sheet3 edit করার permission আছে কিনা
+
+4. API_URL সঠিক আছে কিনা check করুন:
+   - /exec দিয়ে শেষ হয়েছে কিনা
+   - Quotes সঠিক আছে কিনা
+
+
+✅ সব ঠিক থাকলে:
+------------------
+✓ Admin portal থেকে image upload হবে → Sheet1 এ যাবে
+✓ Website content edit করলে → Sheet2 এ update হবে  
+✓ Tour member add করলে → Sheet3 এ যাবে
+✓ Main website (index.html) automatically load করবে Sheet থেকে
+
+
+📞 Need Help?
+-------------
+- Console এ error দেখলে screenshot নিন
+- Google Sheets এর Sheet1, Sheet2, Sheet3 heading row check করুন
+- Web App URL সঠিক আছে কিনা double check করুন

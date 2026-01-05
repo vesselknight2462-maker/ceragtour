@@ -1,0 +1,201 @@
+🌊 Civil Department Tour Website – Saint Martin
+Full Project Prompt / Requirement Document
+🎯 Project Goal
+
+Develop a modern, simple, attractive beach-themed tour website for the Civil Department Saint Martin Tour.
+The website will display tour memories, images, and information dynamically using Google Sheets as the database and Google Drive for image storage.
+
+🧑‍💻 Tech Stack (Mandatory)
+Frontend
+
+HTML5
+
+CSS3 (Beach / Ocean vibe UI)
+
+TypeScript (preferred over JS)
+
+Responsive design (Desktop priority, mobile friendly)
+
+Backend / Database
+
+Google Apps Script
+
+Google Sheets → Main Database
+
+Google Drive → Image Storage
+
+🎨 UI / UX Requirements
+Theme & Feel
+
+Saint Martin Beach / Ocean / Summer vibe
+
+Light colors (sky blue, ocean blue, white, sand)
+
+Clean & minimal design
+
+Smooth scroll & subtle animation
+
+No heavy or complex UI
+
+🏠 Public Website Pages
+1️⃣ Home Page
+
+Hero section with:
+
+Tour name: Civil Department Tour – Saint Martin
+
+Short tagline (Beach • Fun • Memories 🌊)
+
+Smooth scrolling
+
+Navigation bar (Home | Gallery | About)
+
+2️⃣ Gallery Section (Main Focus)
+
+Located at the bottom of the website
+
+Grid-based gallery layout
+
+Each card contains:
+
+Image
+
+Title
+
+Short description
+
+Images loaded dynamically from Google Sheet
+
+Multiple categories:
+
+Beach
+
+Group
+
+Food
+
+Night
+
+Travel
+
+Category-wise filtering (optional but preferred)
+
+3️⃣ About Section
+
+Short description of the tour
+
+Department name
+
+Tour location: Saint Martin Island
+
+🔐 Admin Panel (Private)
+Admin Authentication
+
+Email: Admin@gmail.com
+
+Password: Admin
+
+Simple authentication (no Firebase / JWT required)
+
+Admin Features
+
+Admin can:
+
+Login to admin panel
+
+Add new gallery images
+
+Write:
+
+Image title
+
+Image description
+
+Select category
+
+Upload image from local PC
+
+🗂 Image Upload System
+Image Handling Rules
+
+Uploaded image will:
+
+Be stored inside Google Drive → Image Folder
+
+Generate a public image URL
+
+Save the image URL in Google Sheet automatically
+
+📄 Google Sheet Database Structure
+Column	Field Name	Description
+A	Title	Image title
+B	Description	Image description
+C	Image URL	Google Drive image link
+D	Category	Beach / Food / Group etc
+E	Timestamp	Upload date & time
+🧠 System Architecture
+Admin Panel (HTML + CSS + TypeScript)
+        ↓
+Google Apps Script (API Layer)
+        ↓
+Google Drive (Image Storage)
+        ↓
+Google Sheets (Database)
+        ↓
+Public Website (Gallery Rendering)
+
+⚙️ Google Apps Script Responsibilities
+
+Handle admin authentication
+
+Receive image uploads (Base64)
+
+Upload images to Google Drive folder
+
+Save image metadata & URL to Google Sheet
+
+Fetch image data for public gallery
+
+🌐 Deployment
+
+Website deployed as Google Apps Script Web App
+
+Public access enabled for gallery
+
+Admin access restricted
+
+✅ Functional Requirements Summary
+
+No external database (Only Google Sheet)
+
+No backend server (Only Apps Script)
+
+Dynamic gallery
+
+Admin-controlled content
+
+Simple & maintainable code
+
+Fast loading
+
+⭐ Optional Enhancements (Nice to Have)
+
+Image lazy loading
+
+Category filter animation
+
+Modal image preview
+
+Scroll-based animation
+
+Loading skeleton for gallery
+
+📌 Final Expectation
+
+A beautiful, lightweight Saint Martin tour website where:
+
+Admin easily uploads images
+
+Website auto-updates from Google Sheet
+
+Visitors enjoy a beach-like visual experience 🌴🌊

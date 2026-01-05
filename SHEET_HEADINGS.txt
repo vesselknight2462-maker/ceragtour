@@ -1,0 +1,43 @@
+📊 Google Sheets Heading Setup Instructions
+==============================================
+
+কপি করে Google Sheets এ paste করুন:
+
+
+✅ Sheet1 (Gallery Images) - প্রথম row তে এগুলো লিখুন:
+----------------------------------------------------------
+Title	Description	Image URL	Category	Date Added
+
+
+✅ Sheet2 (Website Content) - প্রথম row তে এগুলো লিখুন:
+---------------------------------------------------------
+Key	Value
+
+
+✅ Sheet3 (Tour Members) - প্রথম row তে এগুলো লিখুন:
+------------------------------------------------------
+Name	Email	Phone	Role	Photo	Date Added
+
+
+📝 Instructions:
+----------------
+1. আপনার Google Sheets open করুন: 
+   https://docs.google.com/spreadsheets/d/1BRLb-61FKy611Lfa2keiqibiDcLqub5ZUIW86FTsV2E/edit
+
+2. Sheet1 এ যান, A1 cell এ click করুন
+   উপরের Sheet1 heading গুলো copy করে paste করুন
+
+3. নিচে Sheet2 tab যোগ করুন (+ button click করুন)
+   A1 cell এ Sheet2 heading গুলো paste করুন
+
+4. নিচে Sheet3 tab যোগ করুন
+   A1 cell এ Sheet3 heading গুলো paste করুন
+
+5. সব done! এখন admin portal থেকে data add করতে পারবেন
+
+
+⚠️ Important:
+-------------
+- Heading row (প্রথম row) delete করবেন না
+- Column order change করবেন না
+- Tab দিয়ে separate করা আছে, সরাসরি paste করলেই হবে

@@ -1,0 +1,113 @@
+📊 Sheet2 (Website Content) Setup - Complete List
+===================================================
+
+Sheet2 এ এই data গুলো রাখুন (Key-Value format):
+
+Row 1 (Headings):
+Key | Value
+
+Row 2 onwards (Data - Copy করে Google Sheets এ paste করুন):
+-----------------------------------------------------------
+
+HERO SECTION:
+heroTitle | Civil Department Tour to Saint Martin
+heroSubtitle | Jan 15–18, 2026 • Bangladesh's only coral island
+heroDescription | Top-notch Civil rag tour — comfortable journey, total safety, unlimited fun!
+
+COUNTDOWN:
+tourStartDate | 2026-01-15
+tourEndDate | 2026-01-18
+
+ABOUT SECTION:
+aboutTitle | The Ultimate Adventure
+aboutDesc | Reunite on Saint Martin's Island: turquoise water, coral gardens, music nights and beach BBQ. The Rag Tour of Civil Department batch
+
+FEATURES (4 features):
+feature1Icon | fas fa-bus
+feature1Title | Group Transport
+feature1Desc | Bus to Cox's Bazar Jetty, then Ship.
+
+feature2Icon | fas fa-umbrella-beach
+feature2Title | Coral Beaches
+feature2Desc | Saint Martin & Chera Dwip.
+
+feature3Icon | fas fa-camera
+feature3Title | Photo Moments
+feature3Desc | #CivilTour gallery.
+
+feature4Icon | fas fa-fire
+feature4Title | Bonfire Vibes
+feature4Desc | Music night & BBQ.
+
+TRIP SNAPSHOT:
+tripDates | Jan 15–18, 2026
+tripDestination | Saint Martin's Island
+tripTag | #CivilTour2026
+tripMapLink | https://maps.google.com/?q=Saint+Martin+Island
+
+ITINERARY:
+day1Title | Day 1 • Jan 15
+day1Subtitle | Departure
+day1Schedule | 6:00 PM — Gather at Bus Terminal\n8:00 PM — Board bus to Cox Bazar\n— Unlimited fun en route
+
+day2Title | Day 2 • Jan 16
+day2Subtitle | Island Exploration
+day2Schedule | 5:00–5:30 AM — Arrive at Cox Bazar\n6:00 AM — Breakfast\n7:00 AM — Ship to Saint Martin\n2:00 PM — Arrive at Saint Martin\n2:00–3:00 PM — Freshen up, relax, lunch\n6:00–12:00 AM — Beach Exploration
+
+day3Title | Day 3 • Jan 17
+day3Subtitle | Island Relaxation
+day3Schedule | 7:00 AM — Breakfast\n9:00 AM — Free beach time\n1:00 PM — Lunch\n3:00 PM — Optional water sports\n7:00 PM — Beach BBQ dinner
+
+day4Title | Day 4 • Jan 18
+day4Subtitle | Return Journey
+day4Schedule | 7:00 AM — Breakfast & check-out\n3:00 PM — Board return ship\n9:00 PM — Reach Cox's Bazar\n11:00 PM — Board Bus to Dhaka\n6:00 AM, 19 Jan — Arrived at Dhaka
+
+RULES SECTION:
+rulesTitle | Rules & Regulations
+rulesDescription | Please review the tour guidelines to ensure a safe and enjoyable experience for everyone.
+rulesHeading | Civil Tour Rules & Regulations
+rule1 | All participants must follow the tour schedule
+rule2 | Respect local customs and environment
+rule3 | Stay with the group during activities
+rule4 | No alcohol or illegal substances
+rule5 | Keep the beaches clean
+rulesContact | If you have any questions about the rules or need clarification, please contact the organizing committee.
+
+SPONSOR SECTION:
+sponsorTitle | Partner With Us
+sponsorDescription | Join us in creating unforgettable memories at Saint Martin's Island. Your support helps make this amazing experience possible.
+sponsorHeading | Marketing Strategy
+sponsorSubtitle | Partnering with Civil Tour offers unique brand exposure opportunities to our vibrant student community and beyond.
+
+CONTACT:
+contactEmail | civil.dept@university.edu
+contactPhone | +880 123-456-7890
+departmentName | Civil Engineering Department
+batchName | Civil Batch 2026
+facebookLink | https://facebook.com/civilbatch
+instagramLink | https://instagram.com/civilbatch
+youtubeLink | https://youtube.com/civilbatch
+
+FOOTER:
+footerText | ©2026 Civil Batch. All rights reserved.
+batchPageLink | https://facebook.com/civilbatch
+batchPageName | Civil Batch Page
+
+-----------------------------------------------------------
+
+📝 Setup Instructions:
+--------------
+1. Google Sheets এ Sheet2 tab open করুন
+2. Column A এ "Key" (heading), Column B এ "Value" (heading) লিখুন
+3. উপরের সব Key-Value pairs copy করে Sheet2 এ paste করুন
+4. Values customize করুন আপনার tour details অনুযায়ী
+5. Admin portal থেকে এগুলো edit করতে পারবেন
+
+⚠️ Important Notes:
+- Key names exactly এভাবে লিখতে হবে (case-sensitive)
+- "\n" মানে new line (schedule এ ব্যবহার করা হয়েছে)
+- Date format: YYYY-MM-DD (countdown এর জন্য)
+- Icon names: Font Awesome class names (fas fa-bus, fas fa-fire etc.)
+
+✅ Website এই Sheet2 থেকে automatically content load করবে
+✅ Admin panel এ edit option আসবে এই content গুলো change করার জন্য
